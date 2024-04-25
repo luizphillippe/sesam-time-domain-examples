@@ -1,4 +1,4 @@
-# improveflowH4-workflow
+# Sesam Examples
 Repository to demonstrate the use of OneWorkflow. The repository contains various Jupyter notebook examples demonstrating how to run Sesam applications in a workflow including custom Python scripts.
 This code is only a pilot and only intended for testing. Currently we have support for 
 Sima, Wasim, Sestra, GeniERuntime and Sesam Core. 
