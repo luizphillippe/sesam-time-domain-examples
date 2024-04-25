@@ -34,15 +34,7 @@ To run in the cloud you need to contact DNV and have an account in https://test.
 Follow the instructions in [the installation notebook ](installation/installation.ipynb) to see how to install the required tools. They are required for all the notebooks.
 
 ## Examples provided
-1. [SE28 Example](SE28ExampleSimaWasimSestra/SE28ExampleSimaWasimSestra.ipynb)  demonstrates how to do a parametrized run of Sima, Wasim and Sestra and postprocessing using SifIO. 
-2. [SesamCoreExample](SesamCoreExample/SesamCoreExample.ipynb)  demonstrates how to run Sesam Core Fatigue hotspot using OneWorkflow. See the Sesam Core UM for details. 
-3. [GeniERuntimeExample](GeniERuntimeExample/GeniERuntimeExample.ipynb) demonstrates how to do a parametrized study of a container ship using GeniERuntime and some trivial post processing using SifIO.
-4. [SimaExamples](SimaExamples) contains four examples running only Sima:
-
-    1. [SimaExample.ipynb](SimaExamples/SimaExample.ipynb) notebook example
-    2. [SimaExample.py](SimaExamples/SimaExample.py) same as above but the code organized in a standalone Pytohn script
-    3. [SimaExampleInplace.ipynb](SimaExamples/SimaExampleInPlace.ipynb) notebook example, but using in-place execution locally
-    4. [SimaExampleInplace.py](SimaExamples/SimaExampleInPlace.py) same as above but the code organized in a standalone Pytohn script
+TBD
     
 
 
