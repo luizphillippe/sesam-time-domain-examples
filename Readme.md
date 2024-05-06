@@ -1,7 +1,7 @@
 # Sesam Examples
 Repository to demonstrate the use of OneWorkflow. The repository contains various Jupyter notebook examples demonstrating how to run Sesam applications in a workflow including custom Python scripts.
 This code is only a pilot and only intended for testing. Currently we have support for 
-Sima, Wasim, Sestra, GeniERuntime and Sesam Core. 
+Wasim, Sestra, GeniERuntime and Sesam Core. 
 
 ## Introduction to OneWorkflow
 OneWorkflow is an integrated workflow development system designed to seamlessly incorporate different aspects of the workflow process, including various tools, modules, and services, to create a comprehensive and interconnected solution. This integration streamlines the workflow, improves efficiency, and facilitates a more cohesive and unified approach to the development process. OneWorkflow has a UI-less interface, focusing on providing a powerful backend for workflow automation. It has also the capability to use the same code for running locally or in the cloud using OneCompute.
@@ -34,12 +34,12 @@ To run in the cloud you need to contact DNV and have an account in https://test.
 Follow the instructions in [the installation notebook ](installation/installation.ipynb) to see how to install the required tools. They are required for all the notebooks.
 
 ## Examples provided
-TBD
+1. [SifIO Example](SifIO/NodalDisplacementsFromGeniEB1Tutorial/NodalDisplacementsFromGeniEB1Tutorial.ipynb) demonstrates how to use [SifIO](https://sesam.dnv.com/dev/api/sifio/) a .net API for read and write access of SIF data types to Sesam Interface Files.
     
 
 
-## Notes on local execution
+<!-- ## Notes on local execution
 * The local execution is designed to simulate a cloud run. Because of this random generated folder names where the job will be executed is created within the temporary folder. Folders named blob is where the files will be uploaded before the job is executed, while the job folder is where the actual workflow will be executed: ![Alt text](folderstructure.png)
 
 * While this option is useful for understand how the analysis will be executed in the cloud, there is also an option for running *in-place execution*, i.e. there will be no copying from files to a blob folder, the execution folder (job) folder is used directly for execution, and example of such analysis is [SimaExampleInplace.ipynb](SimaExamples/SimaExampleInPlace.ipynb).
-* For Sima you will find a `runsima.bat` in the job folder. This may be used to debug possible issues with Sima execution.
+* For Sima you will find a `runsima.bat` in the job folder. This may be used to debug possible issues with Sima execution. -->
