@@ -1,0 +1,4 @@
+dnv-oneworkflow
+dnv-onecompute
+dnv-net-runtime
+dnv-sesam-commands==5.20.0

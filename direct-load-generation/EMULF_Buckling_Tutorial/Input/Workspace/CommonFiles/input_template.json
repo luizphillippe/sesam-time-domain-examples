@@ -1,0 +1,7 @@
+{
+  "SestraInputFile": "sestra.inp",
+  "ModelFile": "#modelf#",
+  "LoadFile": "#loadf#",
+  "UlsModelFile": "#cap_mod#",
+  "UlsCommandFile": "",
+}

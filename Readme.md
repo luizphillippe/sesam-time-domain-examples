@@ -1,45 +1,116 @@
-# Sesam Examples
-Repository to demonstrate the use of OneWorkflow. The repository contains various Jupyter notebook examples demonstrating how to run Sesam applications in a workflow including custom Python scripts.
-This code is only a pilot and only intended for testing. Currently we have support for 
-Wasim, Sestra, GeniERuntime and Sesam Core. 
+# Sesam Time Domain Examples
+Repository containing examples for Time Domain analyses for [Floating Offhsore Wind](https://www.dnv.com/software/services/software-to-design-floating-wind-turbine-support-structures/) using Sesam. 
+The repository contains various Jupyter notebook examples demonstrating how to run Sesam applications in a workflow including custom Python scripts using the Python library OneWorkflow developed by DNV.
 
-## Introduction to OneWorkflow
-OneWorkflow is an integrated workflow development system designed to seamlessly incorporate different aspects of the workflow process, including various tools, modules, and services, to create a comprehensive and interconnected solution. This integration streamlines the workflow, improves efficiency, and facilitates a more cohesive and unified approach to the development process. OneWorkflow has a UI-less interface, focusing on providing a powerful backend for workflow automation. It has also the capability to use the same code for running locally or in the cloud using OneCompute.
+The image below illustrates a typical Time Domain analysis workflow including a coupled analysis:
 
-## Prerequisites required
-### Python
-Install Python 3.10, 3.11 or [3.12](https://www.python.org/downloads/release/python-31011/), typically for windows you want this [version](https://www.python.org/downloads/release/python-3122/).  One important note during the installation is to select the option 'Add python.exe to the PATH' (as shown in the image below). This option is turned off by default, so make sure to activate it for a smoother development experience
-<img src="pythonpath.png" alt="image" width="70%" height="auto">
-Verify the Default Python Version: To ensure a smooth development experience, it's important to confirm the default Python version on your system, especially if you have multiple Python installations:
-* Start the command line (Windows-start-menu --> type cmd --> enter)
-* Type `python --version` enter
+<img src="workflow.png" alt="image" width="100%" height="auto">
+<br><br>
 
-### VSCode
-Download and install Visual Studio Code from the official website. Visual Studio Code is a free, open-source code editor that provides excellent support for various programming languages and extensions, making it a popular choice for developers.
-[VSCode](https://code.visualstudio.com/download) including the following extensions (install them after VSCode is installed). Jupyter and Python will most likely be installed automatically when opening an ipynb file.
-* [Python extension](https://code.visualstudio.com/docs/languages/python), [download link](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-* [Jupyer Notebook extension](https://code.visualstudio.com/docs/datascience/jupyter-notebooks), [download link](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
-
-### git 
-You also need [git](https://git-scm.com/downloads) for cloning this code. 
-With git installed you can clone this repository by starting a command line prompt  in the folder where you want this repository to be located:
-`git clone https://github.com/dnv-opensource/improveflowH4-workflow.git`
+The following examples focus on the part of the workflow contained in the green box. They demonstrate various ways to read results for one or many design load cases from coupled analysis, then reconstruct the loads and run finite element analysis on the substructure, before doing fatigue and buckling checks.
 
 
-You need the relevant Sesam products  with license for local runs. In addition you need [Application Version Manager](https://sesam.dnv.com/download/windows/applicationversionmanager_3200_inst_win.zip) (no license required) for local execution. You can get the Sesam applications here: https://sesam.dnv.com/download/programs.html.
+**_Note:_**  For new users to Time Domain Buckling Analysis of FOWT structures we recommend to start with the tutorials before running other workflow examples.
+<br>
+<br>
 
-To run in the cloud you need to contact DNV and have an account in https://test.onecompute.dnv.com/ 
+# Table of contents 
+* [Prerequisites](#Prerequisites)
+* [Tutorials](#tutorials)
+* [Other Examples](#other_examples)
+* [Introduction to OneWorkflow](#oneworkflowIntro)
+<br>
+<br>
+
+# Prerequisites (not needed for the general examples)<a id='Prerequisites'></a>
+
+## Python
+
+OneWorkflow supports Python versions 3.10, 3.11, and 3.12, which are available for download from the official [Python download page](https://www.python.org/downloads/). Please make sure that you have installed one of these versions and we recommend that you use Python version 3.12. To ensure a smooth development experience, it is essential that you enable the 'Add python.exe to the PATH' option during installation. This option is usually turned off by default, the image below highlights how to enable it.
+
+<img src="pythonpath.png" alt="image" width="50%" height="auto">
+<br>
+<br>
+
+You must verify the default Python version on your system, especially if you have multiple Python installations:
+
+- Open the command line interface (Windows-start-menu --> type cmd --> enter)
+- Type "python --version" and press enter to check the default Python version on your system.
+<br>
+<br>
+
+## Jupyter notebook viewer
+
+Several of the examples and tutorials provided use Jupyter notebooks to document the Python code. This requires a Jupyter notebook viewer, several are available online for download.
+If you don't have a preferred viewer yet, we recommend downloading and installing [Visual Studio Code](https://code.visualstudio.com/download) from its official website. This open-source code editor is recognised by developers worldwide for its extensive language support and a vast array of extensions. After successful installation, install the following extensions:
+
+- [Python Extension](https://code.visualstudio.com/docs/languages/python) - Enhance your Python development experience in VS Code. Download it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
+- [Jupyter Notebook Extension](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) - Seamlessly integrate Jupyter notebooks with VS Code. Download it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter).
+<br><br>
+
+## Git
+
+You need [git](https://git-scm.com/downloads) installed to be able to clone the repository. Once git is installed, open a command prompt in the desired folder and use the command:
+
+`git clone https://github.com/dnv-opensource/sesam-time-domain-examples.git`
+<br><br>
+
+## Sesam Setup Guide
+
+You need the relevant Sesam products with a license for local runs. Additionally, you need [Application Version Manager](https://sesam.dnv.com/download/windows/applicationversionmanager_3200_inst_win.zip), which does not require a license for local execution. You can download Sesam applications from [here](https://sesam.dnv.com/download/programs.html).
+
+Refer to the [Python Tools Installation Guide](installation/installation.ipynb) for detailed steps on setting up the necessary tools. These are essential for running all notebooks.
+<br>
+<br>
+
+# Tutorials <a id='tutorials'></a>
+
+These tutorials include a step-by-step text description of the workflows as well as the necessary input files to run them. 
+
+* [Plate buckling tutorial](https://myworkspace.dnv.com/download/public/sesam/sesam-workflows/downloads/SesamCore_plate_buckling_tutorial.zip) Learn how to set up and run plate buckling on a simple model. This tutorial shows how to export the capacity model from GeniE and then run Sestra and SesamCore from the command line. Python and a Jupyter notebook reader are NOT required to run this tutorial.
+
+* [Time History Buckling Analysis of EMULF Delta Floater](direct-load-generation/EMULF_Buckling_Tutorial/EMULF_buckling_tutorial.pdf) This tutorial demonstrates how to export a capacity model from GeniE and run direct load generation in Wasim followed by a structural analysis and buckling assessment in SesamCore. The export of the capacity model is done using the GeniE GUI and the remaining steps are performed by running Python code cells in a Jupyter notebook. The notebook demonstrates how a spreadsheet can be used to define the parameters of the design load cases and how to use OneWorkflow to manage and run the analysis. Upon completing the analysis a couple of code examples show how to display selected results and scan for maximum usage factors.  
+<br>
+<br>
 
 
-Follow the instructions in [the installation notebook ](installation/installation.ipynb) to see how to install the required tools. They are required for all the notebooks.
+# Other Examples <a id='other_examples'></a>
 
-## Examples provided
-1. [SifIO Example](SifIO/NodalDisplacementsFromGeniEB1Tutorial/NodalDisplacementsFromGeniEB1Tutorial.ipynb) demonstrates how to use [SifIO](https://sesam.dnv.com/dev/api/sifio/) a .net API for read and write access of SIF data types to Sesam Interface Files.
-    
+Additional examples are available without a detailed description on how to run them. Here, the concepts and technologies applied in the tutorials are used and extended to create other workflows with varied complexity. 
+
+## Buckling code check
+
+* [EMULF Delta Floater extensive example](direct-load-generation/EMULF_DeltaFloater_Sesam_ULS/EMULF_DeltaFloater_Sesam_ULS.ipynb) This notebook illustrates how a spreadsheet can be used to define the parameters of the design load cases and how to use OneWorkflow to manage and run the analysis. Separate Wasim load generation runs allow to account for the load factors in the structural analysis. Upon completing the buckling assessment, a variety of methods to display results are demonstrated.  
+<br>
+
+## Fatigue analysis
+These examples demonstrate how to run a simple Sesam Core Fatigue screening check for a Floating OWT model created in GeniE, exposed to time-dependent wave loads coming from a Sima coupled analysis results via load reconstruction in Wasim, using OneWorkflow locally or in the cloud. 
+<br>
+
+### Single load case Examples
+These examples run only a single load case.
+* [OC4 Wasim SesamCore FLS Python Example Only Python](direct-load-generation/OC4WasimSesamCoreFLSSingleLoadCase/OC4WasimSesamCoreFLSOnlyPython.py) Pure Python example using no external modules.
+* [OC4 Wasim SesamCore FLS Python Example Commands](direct-load-generation/OC4WasimSesamCoreFLSSingleLoadCase/OC4WasimSesamCoreFLSOnlyUsingCommands.py) Python example using the Sesam Commands module but not OneWorkflow.
 
 
-<!-- ## Notes on local execution
-* The local execution is designed to simulate a cloud run. Because of this random generated folder names where the job will be executed is created within the temporary folder. Folders named blob is where the files will be uploaded before the job is executed, while the job folder is where the actual workflow will be executed: ![Alt text](folderstructure.png)
+### Multiple load cases
+The parameters to be used in each load case are specified in an Excel spreadsheet.
 
-* While this option is useful for understand how the analysis will be executed in the cloud, there is also an option for running *in-place execution*, i.e. there will be no copying from files to a blob folder, the execution folder (job) folder is used directly for execution, and example of such analysis is [SimaExampleInplace.ipynb](SimaExamples/SimaExampleInPlace.ipynb).
-* For Sima you will find a `runsima.bat` in the job folder. This may be used to debug possible issues with Sima execution. -->
+* [OC4 Wasim SesamCore FLS Jupyter Example ](direct-load-generation/OC4WasimSesamCoreFLSJupyter/OC4WasimSesamCoreFLSJupyter.ipynb) A Jupyter notebook example demonstrating how to run a few load cases.
+* [OC4 Wasim SesamCore FLS Jupyter Example Stepwise](direct-load-generation/OC4WasimSesamCoreFLSJupyter/OC4WasimSesamCoreFLSJupyterStepwise.ipynb) A Jupyter notebook example demonstrating how to run a few load cases step wise, i.e. adding checking of results after load transfer before fatigue screening with Sesam Core.
+* [OC4 Wasim SesamCore FLS Python Example](direct-load-generation/OC4WasimSesamCoreFLSPython/OC4WasimSesamCoreFLS.py) The same example as OC4WasimSesamCoreFLSJupyter but in pure Python.
+* [OC4 Wasim SesamCore FLS Python Example Utility Class](direct-load-generation/OC4WasimSesamCoreFLSPython/OC4WasimSesamCoreFLSUtilityClass.py) A Python example demonstrating how to run a few load cases with the help of a utility class.
+<br><br>
+
+## Additional documentation
+An overview of commonly used template parameters for Wasim, Sestra and Sesam Core [template_parameters_in_use.txt](template_parameters_in_use.txt).
+<br>
+<br>
+
+# Introduction to OneWorkflow <a id='oneworkflowIntro'></a>
+OneWorkflow is a comprehensive workflow development system that integrates various tools, modules and services seamlessly. This integration streamlines the workflow, enhances efficiency, and promotes a more unified approach to development. With its UI-less interface, OneWorkflow is designed to provide a robust backend for workflow automation. It also offers the flexibility to use the same code for local and cloud-based operations using OneCompute.
+
+Support for Sesam on OneCompute will become public soon. Please contact us on software.support@dnv.com if you are interested in early access to our cloud services. 
+
+<br>
+For a more detailed explanation of OneWorkflow, please consult the [help pages](https://myworkspace.dnv.com/knowledge-centre/sesam-workflows/usermanual).  Here you can learn about the folder structure employed in the examples, explore relevant concepts such as asynchronous programming and find links to the API documentation.

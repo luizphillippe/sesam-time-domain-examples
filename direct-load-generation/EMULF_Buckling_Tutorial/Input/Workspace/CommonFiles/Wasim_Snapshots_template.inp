@@ -1,0 +1,11 @@
+&snapshot_data
+! Wasim Snapshots parameters:
+file = 'wasim_solve.inp' 	!            
+prefix = 'Wasim_snap'    	! Parameter for snapshot file name         
+Tstart = #start_stru# 		! First snapshot, should be equal to first time step       
+Tlast = #stop_stru# 		! Last snapshot               
+DELT = #timestep#           ! Snapshot interval between the first and the last     
+NSTEP = #nsteps#          	! Number of time steps
+sc_len = 1               	! Length scaling factor 
+sc_mas = 1               	! Mass scaling factor
+/

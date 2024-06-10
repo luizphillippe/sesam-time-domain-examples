@@ -2,7 +2,6 @@ Results
 __*
 junit
 .vscode
-.vscode
-#loadcases
-wc.log
+loadcases
+*wc.log
 poetry.lock

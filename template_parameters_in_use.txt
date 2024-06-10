@@ -1,0 +1,67 @@
+
+Mapping replaced parameters for Wasim
+=====================================
+
+Wasim_solve:
+------------
+tstep					= #timestep#				! Time step for simulation in seconds
+tmax					= #stop_solve#				! Simulation duration in seconds
+mor_path				= #prefix#					! Path of Morison model file
+mor_topsel				= #mor_topsel#				! Morison super element model number
+tprescribe_start		= #start_solve#				! Start time for prescribed motion
+tprescribe				= #stop_solve#				! End time for prescribed motion; After this time, Wasim will solve the motion itself
+
+!! Bladed
+!filepmot_bladed        = #bladed_files_name#		! File containing prescribed motion from Bladed
+!file_BladedLocations   = #bladed_files_name#		! The locations where the prescribed forces are located
+!file_faux_Bladed       = #bladed_files_name#		! Prefix of the file for 76/81 output by Bladed
+!iBladedSEA_file        = #bladed_files_name#		! Prescribed wave component information, *.SEA file output by Bladed
+
+!! Sima
+!iwavelev_file          = #sima_files_name#			! Prescribed wave elevation time history, output from Sima
+!iwave_file             = #sima_files_name#			! If short crested wave applied in Sima, use wave components output by Sima instead
+!filepmot_Sima          = #sima_files_name#			! File containing prescribed motion output from Sima
+!file_faux              = #sima_files_name#			! Prescribed forces/moments, output from Sima
+
+Wasim_snapshots:
+----------------
+Tstart					= #start_stru#				! First snapshot, should be equal to first time step      
+Tlast					= #stop_stru#				! Last snapshot, should match Simulation Length           
+DELT					= #timestep#				! Snapshot interval between the first and the last time step
+NSTEP					= #nsteps#					! Number of time steps
+
+Wasim_stru:
+-----------
+filpre					= #prefix_stru#				! Prefix and path of L file  
+iseana					= #mor_topsel#        		! For multi-level super element model, not used here 
+mor_topsel				= #mor_topsel#				! Top level super element number
+Tstart					= #start_stru#				! First Snapshot, should be equal to first time step
+Tlast					= #stop_stru#				! Last snapshot, should match Simulation Length
+DELT					= #timestep#				! Snapshot interval between the first and the last time step
+NSTEP					= #nsteps#					! Number of time steps
+
+
+
+Mapping added parameters for Sestra
+===================================
+
+Sestra:
+=======
+INAM					#prefix#					! Prefix to filename
+LNAM					#prefix#					! Prefix to filename
+RNAM					#prefix#					! Prefix to filename
+MULL					#prefix#					! Prefix to filename
+TOUT					#start_stru#				! First snapshot, should be equal to first time step  
+TOUT					#timestep#					! Snapshot interval between the first and the last time step
+TOUT					#stop_stru#					! Last snapshot, should match Simulation Length
+
+
+Mapping replaced parameters for Sesam Core
+==========================================
+
+Sesam Core:
+===========
+
+#BUCKLINGSTART#			#BUCKLINGSTART#				! Start time of buckling calculation
+#BUCKLINGEND#			#BUCKLINGEND#				! End time of buckling calculation
+

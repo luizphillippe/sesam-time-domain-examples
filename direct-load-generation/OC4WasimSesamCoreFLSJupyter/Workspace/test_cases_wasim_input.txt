@@ -1,0 +1,4 @@
+LoadCase	TimeStep	StartTime	EndTime	NSteps
+LC001	0.1	100	103	29
+LC002	0.1	99	100.7	16
+LC003	0.2	1	6	24

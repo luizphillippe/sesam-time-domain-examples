@@ -1,0 +1,8 @@
+{
+    "python.languageServer": "Pylance",
+   
+    "python.analysis.extraPaths": ["direct-load-generation/PythonModules"],
+    "python.autoComplete.extraPaths": ["direct-load-generation/PythonModules"],
+    
+   
+ }

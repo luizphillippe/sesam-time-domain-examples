@@ -1,7 +1,0 @@
-PyJWT
-jupyter 
-ipykernel 
-ipywidgets 
-pandas
-matplotlib 
-openpyxl 
