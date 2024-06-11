@@ -2,15 +2,19 @@
 Repository containing examples for Time Domain analyses for [Floating Offshore Wind](https://www.dnv.com/software/services/software-to-design-floating-wind-turbine-support-structures/) using Sesam. 
 The repository contains various Jupyter notebook examples demonstrating how to run Sesam applications in a workflow including custom Python scripts using the Python library OneWorkflow developed by DNV.
 
+For a general introduction to the Sesam workflows for Floating Offshore Wind please visit [Sesam Workflows](https://myworkspace.dnv.com/knowledge-centre/sesam-workflows), which has workflow release notes, comprehensive tutorials, and download links for all relevant software.
+
 The image below illustrates a typical Time Domain analysis workflow including a coupled analysis:
 
 <img src="workflow.png" alt="image" width="100%" height="auto">
 <br><br>
 
-The following examples focus on the part of the workflow contained in the green box. They demonstrate various ways to read results for one or many design load cases from coupled analysis, then reconstruct the loads and run finite element analysis on the substructure, before doing fatigue and buckling checks.
+The following examples focus on the part of the workflow contained in the green box. They demonstrate various ways to read results for one or many design load cases from a coupled analysis, then calculate the loads and run a finite element analysis on the substructure, before doing fatigue and buckling checks. 
 
 
-**_Note:_**  For new users to Time Domain Buckling Analysis of FOWT structures we recommend to start with the tutorials before running other workflow examples.
+**_Note:_**  For new users to Time Domain Buckling Analysis of FOWT structures we recommend to start with the [tutorials](#tutorials) before running other workflow examples.
+
+
 <br>
 <br>
 
@@ -69,7 +73,7 @@ These tutorials include a step-by-step text description of the workflows as well
 
 * [Plate buckling tutorial](https://myworkspace.dnv.com/download/public/sesam/sesam-workflows/downloads/SesamCore_plate_buckling_tutorial.zip) Learn how to set up and run plate buckling on a simple model. This tutorial shows how to export the capacity model from GeniE and then run Sestra and SesamCore from the command line. Python and a Jupyter notebook reader are NOT required to run this tutorial.
 
-* [Time History Buckling Analysis of EMULF Delta Floater](direct-load-generation/EMULF_Buckling_Tutorial/EMULF_buckling_tutorial.pdf) This tutorial demonstrates how to export a capacity model from GeniE and run direct load generation in Wasim followed by a structural analysis and buckling assessment in SesamCore. The export of the capacity model is done using the GeniE GUI and the remaining steps are performed by running Python code cells in a Jupyter notebook. The notebook demonstrates how a spreadsheet can be used to define the parameters of the design load cases and how to use OneWorkflow to manage and run the analysis. Upon completing the analysis a couple of code examples show how to display selected results and scan for maximum usage factors.  
+* [Time History Buckling Analysis of EMULF Delta Floater](direct-load-generation/EMULF_Buckling_Tutorial) This tutorial demonstrates how to export a capacity model from GeniE and run direct load generation in Wasim followed by a structural analysis and buckling assessment in SesamCore. The export of the capacity model is done using the GeniE GUI and the remaining steps are performed by running Python code cells in a Jupyter notebook. The notebook demonstrates how a spreadsheet can be used to define the parameters of the design load cases and how to use OneWorkflow to manage and run the analysis. Upon completing the analysis a couple of code examples show how to display selected results and scan for maximum usage factors.  
 <br>
 <br>
 

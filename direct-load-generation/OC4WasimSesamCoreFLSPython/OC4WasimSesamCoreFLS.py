@@ -1,43 +1,38 @@
-from pathlib import Path
 import os, sys
-from dnv.oneworkflow.utils.workunit_extension import *
-from dnv.oneworkflow.utils import *
+root_folder = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(root_folder, "../PythonModules"))
+
+from pathlib import Path
 import pandas as pd
-import os
-from dnv.sesam.commands import *
-from dnv.oneworkflow import *
 import shutil
 import json
+from dnv.oneworkflow.utils.workunit_extension import *
+from dnv.oneworkflow.utils import *
+from dnv.sesam.commands import *
+from dnv.oneworkflow import *
 from WasimTaskCreator import *
+
 # local workspace, all results will be put here after local or cloud runs
-# location of common files for all analysis, has to be below workspacePath and in the folder names CommonFiles
-sys.path.append("../PythonModules")
-root_folder = os.getcwd()
+# location of common files for all analyses, has to be below workspacePath and in the folder named CommonFiles
 workspacePath = str(Path(root_folder, 'Workspace'))
 workspaceId = "SesamWasimCoreExample"
-cloudRun = False
-skipFLS = False # if true, run only sestra not sesam core
-plot_results = False
-oneWorkflowTMPFolder = r'c:\oneworkflowTmp' #due to possible issues with long file paths we prefer to have this folder at the root
-if not os.path.exists(oneWorkflowTMPFolder):
-    try:
-        print("Trying to create tmp folder for one workflow local execution")
-        os.mkdir(oneWorkflowTMPFolder)
-        print(oneWorkflowTMPFolder + " created!\n")
-    except:
-        print("did not manage to create tmp folder for local execution. Check that you have privileges to create it or try to manually create it from the coomand line.")
-#If running locally the code below will also start the local workflow host.
+cloudRun = False # Change to True if you want to run the workflow in the cloud (support for cloud runs coming soon)
+skipFLS = False # if True, run only sestra not sesam core
+plot_results = False # Change to True if you want to plot the results
+
+# If running locally the code below will also start the local workflow host.
 workflow_client = one_workflow_client(workspace_id = workspaceId, workspace_path = workspacePath, cloud_run = cloudRun, inplace_execution=True)
 
-parameter_input_file = "parameter_input.xlsx" #KBLU FIX THIS
+parameter_input_file = "parameter_input.xlsx" 
 parameters_from_excel = pd.read_excel(os.path.join(workspacePath, parameter_input_file), index_col=0)
 
-#Some hardcoded template parameters (not read from Excel)
+# Some hardcoded template parameters (not read from Excel)
 topsuper = 1
 try:
     os.chdir(os.path.join(workspacePath,"LoadCases"))
 except:
     print("LoadCases folder not found")
+
 #Recognize the following column titles in Excel spreadsheet and map them to the correct input parameters given in Wasim template files
 parameter_mapping = {'TimeStep': "timestep", "StartTime": "start_solve", "EndTime": "stop_solve", "NSteps": "nsteps"}
 commands_info = []
