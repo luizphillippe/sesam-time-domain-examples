@@ -1,0 +1,8 @@
+{
+  "IsParallel": true,
+  "FemPath": "#femfile#",
+  "InputPath": "#inputpath#",
+  "OutputPath": "#outputpath#",
+  "ExecutePath": "#executepath#",
+  "SimaForcePath": "#simaforce#"  
+  }

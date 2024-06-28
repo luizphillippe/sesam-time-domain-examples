@@ -1,0 +1,265 @@
+
+
+        ******      ******       ******       ******      ** ***  ****
+       ********    ********     ********     ********     *************
+      **      **  **      **   **      **   **      **    **    **    **
+      **          **      **   **                   **    **    **    **
+       *******    **********    *******      *********    **    **    **
+        *******   *********      *******    **********    **    **    **
+              **  **                   **   **      **    **    **    **
+      **      **  **      **   **      **   **      **    **    **    **
+       ********    ********     ********     *********    **    **    **
+        ******      ******       ******       ****** **   **    **    **
+
+                        ********************************
+                        *                              *
+                        *         H Y D R O D          *
+                        *                              *
+                        *  LoadingCondition1_floater   *
+                        *                              *
+                        ********************************
+
+                   Marketing and Support by DNV GL - Digital Solutions
+
+  Program id   : V7.0-01                  Operating system : 6.2.9200.0              
+  Release date : 08-11-2023               Platform         : Win32NT                 
+  Access time  : 26-06-2024               Version          : 6.2.9200.0              
+  User id      : JOCU                     Service pack     :                         
+  Domain       : VERIT                    Machine name     : NOOSLL23040313          
+
+  Copyright DNV GL AS, P.O.Box 300, N-1322 Hovik, Norway
+
+
+    PROPERTIES
+      AdditionalMatricesUsage = AddTo
+      AutoBalance = False
+      BalancingMethod = Potential
+      BalancingTolerance = 0.0001 %
+      BeamDisplacement = 0 kg
+      BeamDisplacementVolume = 0 m^3
+      BilgeKeelArea = 
+      BlockCoefficient = NaN
+      CenterOfBuoyancy = 0.000464394076254284 m, 0 m, -10.486707088161 m
+      CenterOfBuoyancyX = 0.000464394076254284 m
+      CenterOfBuoyancyY = 0 m
+      CenterOfBuoyancyZ = -10.486707088161 m
+      CenterOfFlotation = 0.00131213992899949 m, 0 m, 0 m
+      CenterOfFlotationX = 0.00131213992899949 m
+      CenterOfFlotationY = 0 m
+      CenterOfFlotationZ = 0 m
+      CenterOfGravity = -4.59656027186455 m, -0.00449463688082599 m, -2.24860011958517 m
+      CenterOfGravityX = -4.59656027186455 m
+      CenterOfGravityY = -0.00449463688082599 m
+      CenterOfGravityZ = -2.24860011958517 m
+      CenterX = 0 m
+      CenterY = 0 m
+      Color = DNVS.Sesam.Commons.ConceptCore.Color
+      CompartmentContentMass = 0 kg
+      CriticalAzimuth = 90 deg
+      Displacement = 17461172.3831719 kg
+      DisplacementVolume = 17035.2901299238 m^3
+      DraftAft = 0 m
+      DraftFore = 0 m
+      DryCenterOfGravity = -4.59656027186455 m, -0.00449463688082599 m, -2.24860011958517 m
+      DryCenterOfGravityX = -4.59656027186455 m
+      DryCenterOfGravityY = -0.00449463688082599 m
+      DryCenterOfGravityZ = -2.24860011958517 m
+      DryMass = 4320303.01981257 kg
+      DryProductInertiaRadiusXY = 0.368943569517181 m
+      DryProductInertiaRadiusXZ = 7.5726374873139 m
+      DryProductInertiaRadiusYZ = -0.275881023089694 m
+      DryRadiusOfGyrationX = 29.7727979159735 m
+      DryRadiusOfGyrationY = 33.2254130628715 m
+      DryRadiusOfGyrationZ = 41.2934937494632 m
+      EquilibriumStatus = The loading condition is NOT in hydrostatic equilibrium.
+      FreeSurfaceCorrection = 0 m
+      HaveInvalidDraftCuttingPlane = True
+      HeelAngle = 0 deg
+      Id = f67b789c-e179-4437-bf50-51882a928767
+      KeelToCenterOfBuoyancy = -10.486707088161 m
+      KeelToCenterOfGravity = -2.24860011958517 m
+      LoadingConditionType = WaterlineTrim
+      Location = Location1
+      LongitudinalCenterOfBuoyancy = 0.000464394076254284 m
+      LongitudinalCenterOfGravity = -4.59656027186455 m
+      LongitudinalMetacenter = 0.000464394076254284 m, 0 m, 16.7387592995947 m
+      LongitudinalMetacenterX = 0.000464394076254284 m
+      LongitudinalMetacenterY = 0 m
+      LongitudinalMetacenterZ = 16.7387592995947 m
+      LongitudinalMetacentricHeight = 18.9873594191798 m
+      MassBalanceError = -13140869.3633594 kg
+      MeanMouldedDraft = 15 m
+      MouldedBreadth = 99 m
+      MouldedDraftAtMidsection = NaN
+      MouldedDraftStatus = One or more cutting planes cut no buoyancy model or waterplane.
+      PlateThicknessCorrection = False
+      PretensionMass = 0 kg
+      ProductInertiaRadiusXY = 0.395953566483421 m
+      ProductInertiaRadiusXZ = 8.22682590622087 m
+      ProductInertiaRadiusYZ = -0.256911848448644 m
+      RadiusOfGyrationX = 29.7727979159735 m
+      RadiusOfGyrationY = 33.2254130628715 m
+      RadiusOfGyrationZ = 41.2934937494632 m
+      RelativeMassBalanceError = 304.165455596433 %
+      RelativeXAlignmentError = 3.4214971171856 %
+      RelativeYAlignmentError = 0.00334529141087281 %
+      ShowBeamBuoyancyModel = False
+      ShowGlobalOrigin = False
+      ShowHullBuoyancyModel = False
+      ShowPlane = True
+      SizeX = 200 m
+      SizeY = 200 m
+      TotalMass = 4320303.01981257 kg
+      TransverseCenterOfBuoyancy = 0 m
+      TransverseCenterOfGravity = -0.00449463688082599 m
+      TransverseDryMetacentricHeight = 18.9886230041806 m
+      TransverseMetacenter = 0.000464394076254284 m, 0 m, 16.7400228845955 m
+      TransverseMetacenterX = 0.000464394076254284 m
+      TransverseMetacenterY = 0 m
+      TransverseMetacenterZ = 16.7400228845955 m
+      TransverseMetacentricHeight = 18.9886230041806 m
+      Trim = 0 m
+      TrimAngle = 0 deg
+      VerticalCenterOfBuoyancy = -10.486707088161 m
+      VerticalCenterOfGravity = -2.24860011958517 m
+      VisualOffset = 0 m
+      WaterlineArea = 381.927 m^2
+      WaterlineBreadth = 99 m
+      WaterlineLength = 85.737 m
+      WaterLineZ = 0 m
+      WeakDryMetacentricHeight = 18.9873594191798 m
+      WeakFreeSurfaceCorrection = 0 m
+      WeakMetacenter = 0.000464394076254284 m, 0 m, 16.7387592995947 m
+      WeakMetacenterX = 0.000464394076254284 m
+      WeakMetacenterY = 0 m
+      WeakMetacenterZ = 16.7387592995947 m
+      WeakMetacentricHeight = 18.9873594191798 m
+      XAlignmentError = 4.5970246659408 m
+      YAlignmentError = 0.00449463688082599 m
+
+    COMPARTMENTS
+
+    LC = 2.000
+    Name = LC2
+    Volume = 2800.724 m^3
+    &Permeability = Permeability1
+    Permeability = 100.000 %
+    Fluid = -
+    Density = 0.000 kg/m^3
+    &FillingFraction = 
+    FillingFraction = 0.000 %
+    Flooded = False
+    FluidVolume = 0.000 m^3
+    FluidMass = 0.000 kg
+    FluidCogX = NaN
+    FluidCogY = NaN
+    FluidCogZ = NaN
+    FreeSurfaceArea = 0.000 m^2
+    FreeSurfaceCenterX = NaN
+    FreeSurfaceCenterY = NaN
+    FreeSurfaceCenterZ = NaN
+
+    LC = 3.000
+    Name = LC3
+    Volume = 3788.894 m^3
+    &Permeability = Permeability1
+    Permeability = 100.000 %
+    Fluid = -
+    Density = 0.000 kg/m^3
+    &FillingFraction = 
+    FillingFraction = 0.000 %
+    Flooded = False
+    FluidVolume = 0.000 m^3
+    FluidMass = 0.000 kg
+    FluidCogX = NaN
+    FluidCogY = NaN
+    FluidCogZ = NaN
+    FreeSurfaceArea = 0.000 m^2
+    FreeSurfaceCenterX = NaN
+    FreeSurfaceCenterY = NaN
+    FreeSurfaceCenterZ = NaN
+
+    LC = 4.000
+    Name = LC4
+    Volume = 3819.169 m^3
+    &Permeability = Permeability1
+    Permeability = 100.000 %
+    Fluid = -
+    Density = 0.000 kg/m^3
+    &FillingFraction = 
+    FillingFraction = 0.000 %
+    Flooded = False
+    FluidVolume = 0.000 m^3
+    FluidMass = 0.000 kg
+    FluidCogX = NaN
+    FluidCogY = NaN
+    FluidCogZ = NaN
+    FreeSurfaceArea = 0.000 m^2
+    FreeSurfaceCenterX = NaN
+    FreeSurfaceCenterY = NaN
+    FreeSurfaceCenterZ = NaN
+
+    LC = 5.000
+    Name = LC5
+    Volume = 3768.893 m^3
+    &Permeability = Permeability1
+    Permeability = 100.000 %
+    Fluid = -
+    Density = 0.000 kg/m^3
+    &FillingFraction = 
+    FillingFraction = 0.000 %
+    Flooded = False
+    FluidVolume = 0.000 m^3
+    FluidMass = 0.000 kg
+    FluidCogX = NaN
+    FluidCogY = NaN
+    FluidCogZ = NaN
+    FreeSurfaceArea = 0.000 m^2
+    FreeSurfaceCenterX = NaN
+    FreeSurfaceCenterY = NaN
+    FreeSurfaceCenterZ = NaN
+
+    LC = 6.000
+    Name = LC6
+    Volume = 2113.947 m^3
+    &Permeability = Permeability1
+    Permeability = 100.000 %
+    Fluid = -
+    Density = 0.000 kg/m^3
+    &FillingFraction = 
+    FillingFraction = 0.000 %
+    Flooded = False
+    FluidVolume = 0.000 m^3
+    FluidMass = 0.000 kg
+    FluidCogX = NaN
+    FluidCogY = NaN
+    FluidCogZ = NaN
+    FreeSurfaceArea = 0.000 m^2
+    FreeSurfaceCenterX = NaN
+    FreeSurfaceCenterY = NaN
+    FreeSurfaceCenterZ = NaN
+
+    LC = 7.000
+    Name = LC7
+    Volume = 2113.947 m^3
+    &Permeability = Permeability1
+    Permeability = 100.000 %
+    Fluid = -
+    Density = 0.000 kg/m^3
+    &FillingFraction = 
+    FillingFraction = 0.000 %
+    Flooded = False
+    FluidVolume = 0.000 m^3
+    FluidMass = 0.000 kg
+    FluidCogX = NaN
+    FluidCogY = NaN
+    FluidCogZ = NaN
+    FreeSurfaceArea = 0.000 m^2
+    FreeSurfaceCenterX = NaN
+    FreeSurfaceCenterY = NaN
+    FreeSurfaceCenterZ = NaN
+
+  
+  Time started:  2024/06/26 15:50:27
+  Time finished: 2024/06/26 15:50:27
+  Duration:      3 ms
