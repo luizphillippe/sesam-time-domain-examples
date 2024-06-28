@@ -1,5 +1,5 @@
 # Sesam Time Domain Examples
-Repository containing examples for Time Domain analyses for [Floating Offhsore Wind](https://www.dnv.com/software/services/software-to-design-floating-wind-turbine-support-structures/) using Sesam. 
+Repository containing examples for Time Domain analyses for [Floating Offshore Wind](https://www.dnv.com/software/services/software-to-design-floating-wind-turbine-support-structures/) using Sesam. 
 The repository contains various Jupyter notebook examples demonstrating how to run Sesam applications in a workflow including custom Python scripts using the Python library OneWorkflow developed by DNV.
 
 The image below illustrates a typical Time Domain alaysis workflow including a coupled analysis:
