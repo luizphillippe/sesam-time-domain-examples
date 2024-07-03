@@ -2,9 +2,9 @@
 Repository containing examples for Time Domain analyses for [Floating Offshore Wind](https://www.dnv.com/software/services/software-to-design-floating-wind-turbine-support-structures/) using Sesam. 
 The repository contains various Jupyter notebook examples demonstrating how to run Sesam applications in a workflow including custom Python scripts using the Python library OneWorkflow developed by DNV.
 
-The image below illustrates a typical Time Domain alaysis workflow including a coupled analysis:
+The image below illustrates a typical Time Domain analysis workflow including a coupled analysis:
 
-<img src="_imgs/workflow.png" alt="image" width="30%" height="auto">
+<img src="_imgs/workflow.png" alt="image" width="50%" height="auto">
 <br><br>
 
 The following examples focus on the part of the workflow contained in the green box. They demonstrate various ways to read results for one or many design load cases from coupled analysis, then reconstruct the loads and run finite element analysis on the substructure, before doing fatigue and buckling checks.
@@ -18,13 +18,12 @@ The following examples focus on the part of the workflow contained in the green 
 
 # Table of contents 
 * [Prerequisites](#Prerequisites)
-* [Tutorials](#tutorials)
-* [Other Examples](#other_examples)
+* [Tutorials & Examples](#tutorials)
 * [Introduction to OneWorkflow](#oneworkflowIntro)
 <br>
 <br>
 
-# Prerequisites (not needed for the general examples)<a id='Prerequisites'></a>
+# Prerequisites <a id='Prerequisites'></a>
 
 ## Python
 
@@ -32,7 +31,7 @@ OneWorkflow supports Python versions 3.10, 3.11, and 3.12, which are available f
 
 To ensure a smooth development experience, it is essential that you enable the 'Add python.exe to the PATH' option during installation. This option is usually turned off by default, the image below highlights how to enable it.
 
-<img src="_imgs/pythonpath.png" alt="image" width="30%" height="auto">
+<img src="_imgs/pythonpath.png" alt="image" width="50%" height="auto">
 <br>
 <br>
 
@@ -42,7 +41,7 @@ You must verify the default Python version on your system, especially if you hav
 
 It is recommend to disable the MAX_PATH limitation in Windows, to avoid problems with paths exceeding a length of 260 characters. This can be done from the Python setup, but requires local administrator privileges.
 
-<img src="_imgs/max_path_length.png" alt="image" width="30%" height="auto">
+<img src="_imgs/max_path_length.png" alt="image" width="50%" height="auto">
 
 See the [Python documentation](https://docs.python.org/3/using/windows.html#removing-the-max-path-limitation) for more information.
 
@@ -61,7 +60,7 @@ If you don't have a preferred viewer yet, we recommend downloading and installin
 ## Optional: Git
 If you would like to [clone](https://git-scm.com/docs/git-clone) this repository, you will need to have [Git](https://git-scm.com/downloads), [GitHub CLI](https://cli.github.com/), or [GitHub Desktop](https://desktop.github.com/) installed. Please refer to the documentation for these tools for instruction on how to use.
 
-Using git, you can clone this repository by opining a command promt and entering the command:<br>
+Using git, you can clone this repository by opining a command prompt and entering the command:<br>
 `git clone https://github.com/dnv-opensource/sesam-time-domain-examples.git`
 
 SImilarly if you prefer to use GitHub CLI:<br>
@@ -79,51 +78,15 @@ You may also download a zip file containing all files from [here](https://github
 
 You need the relevant Sesam products with a license for local runs. Additionally, you need [Application Version Manager](https://sesam.dnv.com/download/windows/applicationversionmanager_3200_inst_win.zip), which does not require a license for local execution. You can download Sesam applications from [here](https://sesam.dnv.com/download/programs.html).
 
-Refer to the [Python Tools Installation Guide](installation/installation.ipynb) for detailed steps on setting up the necessary tools and installing the DNV specific Python packages. These are essential for running all notebooks.
+Refer to the [DNV Python Tools Installation Guide](installation/installation.ipynb) for detailed steps on setting up the necessary tools and installing the DNV specific Python packages. These are essential for running all notebooks.
 <br>
 <br>
 
-# Tutorials <a id='tutorials'></a>
+# Tutorials and examples <a id='#tutorials'></a>
+Our tutorials and examples are split into sub-folders, to cover our different Time Domain workflows: 
+* [Time Domain Direct Load Generation](direct-load-generation/Readme.md)  
+* [Time Domain Response Reconstruction](response-reconstruction/Readme.md)
 
-These tutorials include a step-by-step text description of the workflows as well as the necessary input files to run them. 
-
-* [Plate buckling tutorial](https://myworkspace.dnv.com/download/public/sesam/sesam-workflows/downloads/SesamCore_plate_buckling_tutorial.zip) Learn how to set up and run plate buckling on a simple model. This tutorial shows how to export the capacity model from GeniE and then run Sestra and SesamCore from the command line. Python and a Jupyter notebook reader are NOT required to run this tutorial.
-
-* [Time History Buckling Analysis of EMULF Delta Floater](direct-load-generation/EMULF_Buckling_Tutorial/EMULF_buckling_tutorial.pdf) This tutorial demonstrates how to export a capacity model from GeniE and run direct load generation in Wasim followed by a structural analysis and buckling assessment in SesamCore. The export of the capacity model is done using the GeniE GUI and the remaining steps are performed by running Python code cells in a Jupyter notebook. The notebook demonstrates how a spreadsheet can be used to define the parameters of the design load cases and how to use OneWorkflow to manage and run the analysis. Upon completing the analysis a couple of code examples show how to display selected results and scan for maximum usage factors.  
-<br>
-<br>
-
-
-# Other Examples <a id='other_examples'></a>
-
-Additional examples are available without a detailed description on how to run them. Here, the concepts and technologies applied in the tutorials are used and extended to create other workflows with varied complexity. 
-
-## Buckling code check
-
-* [EMULF Delta Floater extensive example](direct-load-generation/EMULF_DeltaFloater_Sesam_ULS/EMULF_DeltaFloater_Sesam_ULS.ipynb) This notebook illustrates how a spreadsheet can be used to define the parameters of the design load cases and how to use OneWorkflow to manage and run the analysis. Separate Wasim load generation runs allow to account for the load factors in the structural analysis. Upon completing the buckling assessment, a variety of methods to display results are demonstrated.  
-<br>
-
-## Fatigue analysis
-These examples demonstrate how to run a simple Sesam Core Fatigue screening check for a Floating OWT model created in GeniE, exposed to time-dependent wave loads coming from a Sima coupled analysis results via load reconstruction in Wasim, using OneWorkflow locally or in the cloud. 
-<br>
-
-### Single load case Examples
-These examples run only a single load case.
-* [OC4 Wasim SesamCore FLS Python Example Only Python](direct-load-generation/OC4WasimSesamCoreFLSSingleLoadCase/OC4WasimSesamCoreFLSOnlyPython.py) Pure Python example using no external modules.
-* [OC4 Wasim SesamCore FLS Python Example Commands](direct-load-generation/OC4WasimSesamCoreFLSSingleLoadCase/OC4WasimSesamCoreFLSOnlyUsingCommands.py) Python example using the Sesam Commands module but not OneWorkflow.
-
-
-### Multiple load cases
-The parameters to be used in each load case are specified in an Excel spreadsheet.
-
-* [OC4 Wasim SesamCore FLS Jupyter Example ](direct-load-generation/OC4WasimSesamCoreFLSJupyter/OC4WasimSesamCoreFLSJupyter.ipynb) A Jupyter notebook example demonstrating how to run a few load cases.
-* [OC4 Wasim SesamCore FLS Jupyter Example Stepwise](direct-load-generation/OC4WasimSesamCoreFLSJupyter/OC4WasimSesamCoreFLSJupyterStepwise.ipynb) A Jupyter notebook example demonstrating how to run a few load cases step wise, i.e. adding checking of results after load transfer before fatigue screening with Sesam Core.
-* [OC4 Wasim SesamCore FLS Python Example](direct-load-generation/OC4WasimSesamCoreFLSPython/OC4WasimSesamCoreFLS.py) The same example as OC4WasimSesamCoreFLSJupyter but in pure Python.
-* [OC4 Wasim SesamCore FLS Python Example Utility Class](direct-load-generation/OC4WasimSesamCoreFLSPython/OC4WasimSesamCoreFLSUtilityClass.py) A Python example demonstrating how to run a few load cases with the help of a utility class.
-<br><br>
-
-## Additional documentation
-An overview of commonly used template parameters for Wasim, Sestra and Sesam Core [template_parameters_in_use.txt](template_parameters_in_use.txt).
 <br>
 <br>
 
