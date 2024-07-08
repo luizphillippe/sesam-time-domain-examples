@@ -86,6 +86,7 @@ Refer to the [DNV Python Tools Installation Guide](installation/installation.ipy
 Our tutorials and examples are split into sub-folders, to cover our different Time Domain workflows: 
 * [Time Domain Direct Load Generation](direct-load-generation/Readme.md)  
 * [Time Domain Response Reconstruction](response-reconstruction/Readme.md)
+* [Other Examples](other-examples/Readme.md) (An example for reading and writing SIF is presented here.)
 
 <br>
 <br>
