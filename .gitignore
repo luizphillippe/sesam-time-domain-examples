@@ -3,5 +3,6 @@ __*
 junit
 .vscode
 loadcases
+ExecutionFolder
 *wc.log
 poetry.lock
