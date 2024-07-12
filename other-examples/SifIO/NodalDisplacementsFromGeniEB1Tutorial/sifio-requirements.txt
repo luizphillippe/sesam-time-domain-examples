@@ -1,5 +1,5 @@
-quantconnect-stubs 
-pythonnet 
-dnv-net-runtime== 1.0.0
-dnv-net-intellisense== 1.0.0
-dnv-sifio== 5.3.6
+quantconnect-stubs==16345
+pythonnet==3.0.3
+dnv-net-runtime==1.0.0
+dnv-net-intellisense==1.0.0
+dnv-sifio==5.3.6
