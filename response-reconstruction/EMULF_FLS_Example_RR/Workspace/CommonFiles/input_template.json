@@ -1,0 +1,16 @@
+{
+  "ModelFile": "#fem#",
+  "SimaForcePath": "sima.force",
+  "SimaWavePath":"sima.wave",
+  "SimaMotionsPath":"sima.motion",
+  "ScreeningModelFile": "fat_screen.json",
+  "ScreeningCommandFile": "SesamCore_screening.jnl",
+  "DiffractionUnitResponsesPath":"..\\..\\Precompute\\Output\\DiR3.SIN",
+  "RadiationTxUnitResponsesPath":"..\\..\\Precompute\\Output\\RaTxR3.SIN",
+  "RadiationTyUnitResponsesPath":"..\\..\\Precompute\\Output\\RaTyR3.SIN",
+  "RadiationTzUnitResponsesPath":"..\\..\\Precompute\\Output\\RaTzR3.SIN",
+  "RadiationRxUnitResponsesPath":"..\\..\\Precompute\\Output\\RaRxR3.SIN",
+  "RadiationRyUnitResponsesPath":"..\\..\\Precompute\\Output\\RaRyR3.SIN",
+  "RadiationRzUnitResponsesPath":"..\\..\\Precompute\\Output\\RaRzR3.SIN",
+  "NodalUnitResponsesPath": "..\\..\\Precompute\\Output\\UnitNodalR3.SIN",
+}
