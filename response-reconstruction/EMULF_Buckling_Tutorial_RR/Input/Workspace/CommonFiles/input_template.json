@@ -18,7 +18,7 @@
   "ReconstructionInput": {	
 	"WindowFunctionType": 1,
 	"WindowFunctionParameter": 0.05,
-	"PrintCsvFileForTimeSeriesReactionForces":true,
+	"ReactionForceSumCsv":true,
   "IgnoreTimesSmallerThan": 3, 
   "IgnoreTimesLargerThan": 4,
   },
